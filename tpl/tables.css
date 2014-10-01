@@ -1,0 +1,37 @@
+@CHARSET "ISO-8859-1";
+
+table
+{
+	border-collapse: collapse;
+	border-color: RoyalBlue;
+}
+
+table.grey
+{
+	padding: 10px;
+	margin: auto;
+}
+
+table th
+{
+	background-color: #999;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+}
+
+.alt
+{
+	background-color: #eee;
+}
+
+.light
+{
+	background-color: #ddd;
+}
+
+.lighter
+{
+	background-color: #eee;
+}
+
