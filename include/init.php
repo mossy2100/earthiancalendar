@@ -28,7 +28,6 @@ $classDir = "$baseDir/class";
 
 // standard includes:
 require_once "$libDir/strings.php";
-require_once "$libDir/numbers.php";
 require_once "$libDir/debug.php";
 require_once "$libDir/urls.php";
 $debugMode = true;
