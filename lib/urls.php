@@ -30,6 +30,7 @@ function convertSlashes($path)
  */
 function getBaseUrl()
 {
+  var_dump($_SERVER);
 	$protocol = strtolower($_SERVER['SERVER_PROTOCOL']);
 	echo $protocol;
 	$p = strpos($protocol, '/');
