@@ -1,25 +1,20 @@
-@CHARSET "ISO-8859-1";
-
-#header
-{
-	width: 100%;
-	color: LimeGreen;
-	border-bottom: solid 0px Navy;
-	padding: 10px 0px;
-	font-size: 30px;
-	font-weight: bold;
-	text-align: center;
+#header {
+  width: 100%;
+  color: LimeGreen;
+  border-bottom: solid 0px Navy;
+  padding: 10px 0px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
 }
 
-#footer
-{
-	text-align: center;
-	border-top: solid 1px Navy;
-	padding: 5px;
+#footer {
+  text-align: center;
+  border-top: solid 1px Navy;
+  padding: 5px;
 }
 
-#main
-{
-	vertical-align: top;
-	margin: 20px 310px 20px 30px;
+#main {
+  vertical-align: top;
+  margin: 20px 310px 20px 30px;
 }

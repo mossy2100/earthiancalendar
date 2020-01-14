@@ -1,28 +1,9 @@
-@CHARSET "ISO-8859-1";
-
-a
-{
-	color: RoyalBlue;
-	text-decoration: none;
+a {
+  color: RoyalBlue;
+  text-decoration: none;
 }
 
-a:hover
-{
-	color: LimeGreen;
-	text-decoration: underline;
+a:hover {
+  color: LimeGreen;
+  text-decoration: underline;
 }
-
-/*
-a.wiki
-{
-	color: Navy;
-	text-decoration: none;
-}
-
-a.wiki:hover
-{
-	color: RoyalBlue;
-	text-decoration: underline;
-}
-	
-*/

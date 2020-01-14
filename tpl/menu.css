@@ -1,42 +1,33 @@
-@CHARSET "ISO-8859-1";
-
-#menu
-{
-	position: fixed;
-	right: 0;
-	width: 300px;
+#menu {
+  position: fixed;
+  right: 0;
+  width: 300px;
 }
 
-li
-{
-	padding: 5px 0 5px 0;
+li {
+  padding: 5px 0 5px 0;
 }
 
-#ulTextItems
-{
-	list-style: none;
-	margin: 0 10px 0 5px;
-	padding: 0;
+#ulTextItems {
+  list-style: none;
+  margin: 0 10px 0 5px;
+  padding: 0;
 }
 
-#ulTextItems a
-{
-	background-color: White;
-	text-decoration: none;
-	margin-bottom: 3px;
+#ulTextItems a {
+  background-color: White;
+  text-decoration: none;
+  margin-bottom: 3px;
 }
 
-#ulTextItems a:hover
-{
-	text-decoration: underline;
+#ulTextItems a:hover {
+  text-decoration: underline;
 }
 
-.submenu
-{
-	overflow: hidden;
+.submenu {
+  overflow: hidden;
 }
 
-.submenuArrow
-{
-	border-width: 0px;
+.submenuArrow {
+  border-width: 0px;
 }

@@ -10,12 +10,12 @@ ini_set('log_errors', 1);
 // find directory:
 $local = strpos($_SERVER['HTTP_HOST'], 'earthiancalendar.info') === FALSE;
 if ($local) {
-	$baseUrl = "http://earthiancalendar.local";
-	$smUrl = "http://shaunmoss.local";
+  $baseUrl = "http://earthiancalendar.local";
+  $smUrl = "http://shaunmoss.local";
 }
 else {
-	$baseUrl = "https://earthiancalendar.info";
-	$smUrl = "https://shaunmoss.com";
+  $baseUrl = "https://earthiancalendar.info";
+  $smUrl = "https://shaunmoss.com";
 }
 
 $baseDir = substr(__DIR__, 0, strlen(__DIR__) - strlen('/include'));
@@ -30,4 +30,4 @@ $classDir = "$baseDir/class";
 require_once "$libDir/strings.php";
 require_once "$libDir/debug.php";
 require_once "$libDir/urls.php";
-$debugMode = true;
+$debugMode = TRUE;

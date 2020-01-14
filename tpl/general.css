@@ -1,86 +1,72 @@
-@CHARSET "ISO-8859-1";
-
-body
-{
-	padding: 0px;
-	margin: 0px;
-	background-color: White;
-	text-align: left;
-	background: url("../images/Earth-white-bg.jpg") bottom right no-repeat fixed;
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: White;
+  text-align: left;
+  background: url("../images/Earth-white-bg.jpg") bottom right no-repeat fixed;
 }
 
-body, h1, h2, h3, h4, h5, h6, li, td, th, p, div, span, input, select, textarea
-{
-	font-family: Tahoma, Arial, Helvetica, sans-serif;
-	color: Black;
+body, h1, h2, h3, h4, h5, h6, li, td, th, p, div, span, input, select, textarea {
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  color: Black;
 }
 
-body, li, td, th, pre, p, div, span, input, select, textarea
-{
-	font-size: 12px;
+body, li, td, th, pre, p, div, span, input, select, textarea {
+  font-size: 12px;
 }
 
-h1
-{
-	font-size: 20px;
-	color: Navy;
-	padding: 0px;
-	margin-top: 0px;
-	margin-bottom: 10px;
+h1 {
+  font-size: 20px;
+  color: Navy;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
 
-h2
-{
-	font-size: 17px;
-	padding-top: 0px;
-	margin-top: 0px;
-	color: ForestGreen;
+h2 {
+  font-size: 17px;
+  padding-top: 0px;
+  margin-top: 0px;
+  color: ForestGreen;
 }
 
-h3
-{
-	font-size: 15px;
-	color: Navy;
+h3 {
+  font-size: 15px;
+  color: Navy;
 }
 
-h4
-{
-	font-size: 12px;
-	color: ForestGreen;
+h4 {
+  font-size: 12px;
+  color: ForestGreen;
 }
 
-hr
-{
-	color: RoyalBlue;
-	background-color: RoyalBlue;
-	height: 1px;
-	border: 0px;
-	text-align: left;
-	width: 100%;
-	margin: 0px;
-	padding: 0px;
+hr {
+  color: RoyalBlue;
+  background-color: RoyalBlue;
+  height: 1px;
+  border: 0px;
+  text-align: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
-pre
-{
-	white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
-	white-space: -pre-wrap; /* Opera 4 - 6 */
-	white-space: -o-pre-wrap; /* Opera 7 */
-	white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
-	word-wrap: break-word; /* IE 5.5+ */
+pre {
+  white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
+  white-space: -pre-wrap; /* Opera 4 - 6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
+  word-wrap: break-word; /* IE 5.5+ */
 }
 
-dt
-{
-	font-style: italic;
+dt {
+  font-style: italic;
 }
 
-dd
-{
-	margin-bottom: 10px;
+dd {
+  margin-bottom: 10px;
 }
 
-label
-{
-	cursor: pointer;
+label {
+  cursor: pointer;
 }
