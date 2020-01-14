@@ -30,17 +30,22 @@ function convertSlashes($path)
  */
 function getBaseUrl()
 {
-  var_dump($_SERVER);
-	$protocol = strtolower($_SERVER['SERVER_PROTOCOL']);
-	echo $protocol;
-	$p = strpos($protocol, '/');
-	if ($p !== false)
-	{
-		$protocol = substr($protocol, 0, $p);
-	}
+  if (isset($_SERVER["HTTP_REFERER"])) {
+    $base_url = $_SERVER["HTTP_REFERER"];
+    $len = strlen($base_url);
+    if ($base_url[$len - 1] === '/') {
+      $base_url = substr($base_url, 0, $len - 1);
+    }
+    return $base_url;
+  }
+
 	$host = $_SERVER['HTTP_HOST'];
-	$url = "$protocol://$host";
-	return $url;
+	$scheme = $_SERVER['REQUEST_SCHEME'];
+  if ($scheme) {
+    return "$scheme://$host";
+  }
+
+  return "http://$host";
 }
 
 
@@ -248,4 +253,3 @@ function includeCss($url)
 	$code = getIncludeCssXhtml($url);
 	echo $code;
 }
-?>

@@ -20,6 +20,10 @@ includeJavaScript("$libUrl/jquery-1.2.6.min.js");
 </head>
 <body>
 
+<pre>
+  <?php //var_dump($_SERVER); ?>
+</pre>
+
 <?php require_once "$baseDir/include/menu.php"; ?>
 
 <div id='main'>
