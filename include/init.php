@@ -8,10 +8,10 @@ ini_set('display_startup_errors', 0);
 ini_set('log_errors', 1);
 
 // find directory:
-$local = strpos($_SERVER['HTTP_HOST'], 'earthiancalendar.info') === FALSE;
+$local = strpos($_SERVER['HTTP_HOST'], 'earthiancalendar.info') === false;
 if ($local) {
-  $baseUrl = "http://earthiancalendar.local";
-  $smUrl = "http://shaunmoss.local";
+  $baseUrl = "http://earthiancalendar.localdev";
+  $smUrl = "http://shaunmoss.localdev";
 }
 else {
   $baseUrl = "https://earthiancalendar.info";
@@ -30,4 +30,4 @@ $classDir = "$baseDir/class";
 require_once "$libDir/strings.php";
 require_once "$libDir/debug.php";
 require_once "$libDir/urls.php";
-$debugMode = TRUE;
+$debugMode = true;

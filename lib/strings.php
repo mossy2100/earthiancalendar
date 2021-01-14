@@ -5,7 +5,7 @@ function println($str = '') {
   print $str . "\n";
 }
 
-function printbr($str = '', $noBrIfStrEmpty = FALSE) {
+function printbr($str = '', $noBrIfStrEmpty = false) {
   print $str;
   if ($str != '' || !$noBrIfStrEmpty) {
     print "<br>\n";
@@ -15,7 +15,7 @@ function printbr($str = '', $noBrIfStrEmpty = FALSE) {
 function extractFilename($path) {
   $filename = $path;
   $n = strrpos($path, "/");
-  if ($n !== FALSE) {
+  if ($n !== false) {
     $filename = substr($filename, $n + 1);
   }
   return $filename;
@@ -26,7 +26,7 @@ function isVowel($ch) {
   return in_array($ch, ["a", "e", "i", "o", "u"]);
 }
 
-function plural($str, $n = 0, $returnNum = FALSE) {
+function plural($str, $n = 0, $returnNum = false) {
   // if $n == 1, returns $str (which should be singular form)
   // if $n != 1, returns the plural form of $str
   // Please note this function covers most but not all English plurals.
@@ -111,7 +111,7 @@ function strtoint($str) {
  *
  * @return string
  */
-function nl2brs($str, $add_newlines = TRUE) {
+function nl2brs($str, $add_newlines = true) {
   $search = ["\r\n", "\n", "\r", "<br>"];
   $str = str_ireplace($search, "<br />", $str);
   // add newlines after break tags if required:
@@ -265,10 +265,10 @@ function containsDigits($str) {
   // returns true if $str contains one or more digits:
   for ($i = 0; $i < strlen($str); $i++) {
     if (ctype_digit($str{$i})) {
-      return TRUE;
+      return true;
     }
   }
-  return FALSE;
+  return false;
 }
 
 /**
@@ -482,7 +482,7 @@ function moneyFormat($number) {
  * @todo add option to format a negative money amount in brackets e.g. ($10.00) instead of -$10.00
  *
  */
-function dollarFormat($number, $decimals = 'auto', $plusSign = FALSE) {
+function dollarFormat($number, $decimals = 'auto', $plusSign = false) {
   if ($decimals == 'auto') {
     return sign($number, $plusSign) . "$" . moneyFormat(abs($number));
   }
@@ -492,11 +492,11 @@ function dollarFormat($number, $decimals = 'auto', $plusSign = FALSE) {
 }
 
 function expandYN($ch, $Y = 'Yes', $N = 'No', $default = 'N') {
-  if ($ch === TRUE || $ch == 'Y') {
+  if ($ch === true || $ch == 'Y') {
     return $Y;
   }
   else {
-    if ($ch === FALSE || $ch == 'N' || $default == 'N') {
+    if ($ch === false || $ch == 'N' || $default == 'N') {
       return $N;
     }
     else {
@@ -752,9 +752,9 @@ function colourStr($red, $green, $blue) {
 function inStr($needle, $haystack) {
   // returns true if $needle is in $haystack otherwise false
   if ($needle == '') {
-    return FALSE;
+    return false;
   }
-  return strpos($haystack, $needle) !== FALSE;
+  return strpos($haystack, $needle) !== false;
 }
 
 function convertHtmlEntities($str) {
@@ -801,7 +801,7 @@ function right($str, $n) {
   return substr($str, strlen($str) - $n, $n);
 }
 
-function beginsWith($str, $substr, $ignoreCase = FALSE) {
+function beginsWith($str, $substr, $ignoreCase = false) {
   // returns true if $str begins with $substr:
   if ($ignoreCase) {
     return left(strtolower($str), strlen($substr)) == strtolower($substr);
@@ -811,7 +811,7 @@ function beginsWith($str, $substr, $ignoreCase = FALSE) {
   }
 }
 
-function endsWith($str, $substr, $ignoreCase = FALSE) {
+function endsWith($str, $substr, $ignoreCase = false) {
   // returns true if $str end with $substr:
   if ($ignoreCase) {
     return right(strtolower($str), strlen($substr)) == strtolower($substr);
@@ -944,11 +944,11 @@ function sig($f, $n) {
     $digits = strlen($f);
   }
   else {
-    $firstDigitFound = FALSE;
+    $firstDigitFound = false;
     for ($i = 0; $i < strlen($f); $i++) {
       $ch = $f{$i};
       if (!$firstDigitFound && $ch >= '1' && $ch <= '9') {
-        $firstDigitFound = TRUE;
+        $firstDigitFound = true;
       }
       if ($firstDigitFound && $ch >= '0' && $ch <= '9') {
         $digits++;
@@ -1014,17 +1014,17 @@ function extractPrice($displayPrice, &$loPrice, &$hiPrice) {
   // process matches - convert strings to numbers:
   foreach ($matches as $key => $price) {
     $price = strtolower($price);
-    if (strpos($price, ' million') !== FALSE) {
+    if (strpos($price, ' million') !== false) {
       $price = str_replace(' million', '', $price);
       $mult = 1000000;
     }
     else {
-      if (strpos($price, 'k') !== FALSE) {
+      if (strpos($price, 'k') !== false) {
         $price = str_replace('k', '', $price);
         $mult = 1000;
       }
       else {
-        if (strpos($price, 'm') !== FALSE) {
+        if (strpos($price, 'm') !== false) {
           $price = str_replace('m', '', $price);
           $mult = 1000000;
         }
@@ -1049,7 +1049,7 @@ function extractPrice($displayPrice, &$loPrice, &$hiPrice) {
   }
 }
 
-function sign($num, $plusSign = FALSE) {
+function sign($num, $plusSign = false) {
   return $num < 0 ? '-' : ($plusSign ? '+' : '');
 }
 
@@ -1066,12 +1066,12 @@ function swap(&$a, &$b) {
   $b = $tmp;
 }
 
-function ordinalSuffix($n, $attachNumber = TRUE) {
+function ordinalSuffix($n, $attachNumber = true) {
   // * returns ordinal suffix of $n: {st, nd, rd, th}
   // * returns false if $n is not a positive integer
   // * if $attachNumber true then the number is included
   if ((int) $n != $n || $n <= 0) {
-    return FALSE;
+    return false;
   }
   if ($n % 10 == 1 && $n % 100 != 11) {
     $suffix = 'st';

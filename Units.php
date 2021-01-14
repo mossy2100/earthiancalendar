@@ -5,12 +5,18 @@ require "$libDir/dtl.php";
 ?>
 
 <style>
-#unitsTable { margin: auto; }
-#unitsTable td { text-align: right; }
+#unitsTable {
+  margin: auto;
+}
+
+#unitsTable td {
+  text-align: right;
+}
 </style>
 
 <h1>Units</h1>
-<p>The balanced structure of the Earthian Calendar makes it easy to divide the year into pieces that are equal within &plusmn;1 day.</p>
+<p>The balanced structure of the Earthian Calendar makes it easy to divide the year into pieces
+  that are equal within &plusmn;1 day.</p>
 <table id='unitsTable' border="1" cellspacing="0" cellpadding="5">
   <tr>
     <th>millennia</th>
@@ -92,7 +98,7 @@ require "$libDir/dtl.php";
     <td>4</td>
     <td>121 or 122</td>
   </tr>
-  
+
   <tr>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -127,4 +133,3 @@ require "$libDir/dtl.php";
 <p>&nbsp;</p>
 <?php
 require "tpl/TemplateBottom.php";
-?>

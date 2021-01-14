@@ -14,5 +14,3 @@ $mjd = dtlDateToMJD($d);
 printbr($mjd);
 
 $mjd = 54180;
-
-?>

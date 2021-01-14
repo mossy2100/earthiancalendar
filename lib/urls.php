@@ -71,7 +71,7 @@ function url2path($url) {
     return str_replace($baseUrl, $docRoot, $url);
   }
   else {
-    return FALSE;
+    return false;
   }
 }
 
@@ -90,7 +90,7 @@ function path2url($path) {
     return str_replace($docRoot, $baseUrl, $path);
   }
   else {
-    return FALSE;
+    return false;
   }
 }
 
@@ -104,7 +104,7 @@ function path2url($path) {
  */
 function removeLastPathPart($path) {
   $p = strrpos($path, '/');
-  return $p === FALSE ? '' : substr($path, 0, $p);
+  return $p === false ? '' : substr($path, 0, $p);
 }
 
 /**
@@ -116,7 +116,7 @@ function removeLastPathPart($path) {
  */
 function removeFirstPathPart($path) {
   $p = strpos($path, '/');
-  return $p === FALSE ? '' : substr($path, $p + 1);
+  return $p === false ? '' : substr($path, $p + 1);
 }
 
 /**
@@ -151,7 +151,7 @@ function resolveUrl($url) {
  */
 function removeQueryString($url) {
   $p = strrpos($url, '?');
-  return $p === FALSE ? $url : substr($url, 0, $p);
+  return $p === false ? $url : substr($url, 0, $p);
 }
 
 /**
@@ -164,7 +164,7 @@ function removeQueryString($url) {
  *
  * @return string
  */
-function addQueryStringParameter($url, $key, $value, $encodeValue = FALSE) {
+function addQueryStringParameter($url, $key, $value, $encodeValue = false) {
   if ($encodeValue) {
     $value = urlencode($value);
   }

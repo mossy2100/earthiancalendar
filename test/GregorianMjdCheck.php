@@ -23,17 +23,17 @@ for ($y = $year1; $y <= $year1 + 2000; $y+=4)
 	}
 	$len = dtlDaysInYear($y);
 	$isLeapYear = $len == 366;
-	if ($isLeapYear) print "<font color='red'>"; 
+	if ($isLeapYear) print "<font color='red'>";
 	printbr("$gregDate = $mjd, diff = $diff, years = ".($y - $year1).", len = $len, avg = $avg");
-	if ($isLeapYear) print "</font>"; 
+	if ($isLeapYear) print "</font>";
 }
 */
 
-for ($mjd = EarthianDate::mjdDay0; $mjd <= EarthianDate::mjdDay0 + 12053; $mjd++)
-{
-	$gregDate = dtlMJDToDate($mjd);
-	$mjd2 = dtlDateToMJD($gregDate);
-	printbr("$mjd = $gregDate = $mjd2");
-	if ($mjd != $mjd2) printbr("*****");
+for ($mjd = EarthianDate::mjdDay0; $mjd <= EarthianDate::mjdDay0 + 12053; $mjd++) {
+  $gregDate = dtlMJDToDate($mjd);
+  $mjd2 = dtlDateToMJD($gregDate);
+  printbr("$mjd = $gregDate = $mjd2");
+  if ($mjd != $mjd2) {
+    printbr("*****");
+  }
 }
-?>

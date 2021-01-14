@@ -7,13 +7,13 @@ $fp = fopen("$smDir/calendars/earth/VernalEquinoxDates.txt", "r");
 if (!$fp)
 {
 	echo "Couldn't open file.";
-	exit;	
+	exit;
 }
 
 /*
  * Note that this file was originally written to test a value for 'a', as an offset for the
  * leap year formula.  However, the formula is now set, so $a doesn't do anything at the moment.
- * The outer loop is redundant. 
+ * The outer loop is redundant.
  */
 
 
@@ -21,13 +21,13 @@ $min = -1;
 for ($a = 0; $a < 33; $a++)
 {
 	rewind($fp);
-	
+
 	print("a=$a : ");
-	
+
 	$dtlCopLeapYearOffset = $a;
 	$nYears = 0;
 	$missed = 0;
-	
+
 	while (!feof($fp))
 	{
 		$dt = trim(fgets($fp));
@@ -42,15 +42,15 @@ for ($a = 0; $a < 33; $a++)
 		$cd = EarthianDate::fromGregorian($gd);
 		$strCop = $cd->__toString();
 		printbr($cd);
-		
+
 		$str = "$dt = $strCop $t";
-		
+
 		if ($cd->month == 12)
 		{
 			$year = $cd->year;
 			$dLast = EarthianDate::lastDayOfYear($year);
 			$str .= "&nbsp;&nbsp; $dLast ";
-			$ok = $dLast == $strCop && $hour >= 12; 
+			$ok = $dLast == $strCop && $hour >= 12;
 		}
 		else
 		{
@@ -59,7 +59,7 @@ for ($a = 0; $a < 33; $a++)
 			$str .= "&nbsp;&nbsp; $dFirst ";
 			$ok = $dFirst == $strCop && $hour < 12;
 		}
-		
+
 		if ($ok)
 		{
 			$str .= "OK";
@@ -70,7 +70,7 @@ for ($a = 0; $a < 33; $a++)
 			$missed++;
 		}
 		$nYears++;
-		
+
 		printbr($str);
 		printbr();
 	}
@@ -86,6 +86,3 @@ fclose($fp);
 printbr("minimum missed = $min, with a=$minA");
 
 // result: minimum missed = 4 with a=0
-
-
-?>

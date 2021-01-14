@@ -8,17 +8,14 @@ includeJavaScript("../class/EarthianDate.js");
 </div>
 
 <script>
-
 var isLeapYear;
 var color;
 var text = '';
-for (y = -33; y <= 70; y++)
-{
-	isLeapYear = EarthianDate.isLeapYear(y);
-	text += y + " a leap year? " + (isLeapYear ? 'TRUE' : 'f') + "\n";
+for (y = -33; y <= 70; y++) {
+  isLeapYear = EarthianDate.isLeapYear(y);
+  text += y + ' a leap year? ' + (isLeapYear ? 'TRUE' : 'f') + '\n';
 }
 alert(text);
 
 //setInnerHTML('hey', text);
-
 </script>

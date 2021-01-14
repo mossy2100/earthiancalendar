@@ -23,20 +23,18 @@ for ($y = $year1; $y <= $year1 + 990; $y++)
 	}
 	$len = EarthianDate::daysInYear($earthDate->year);
 	$isLeapYear = $len == 366;
-	if ($isLeapYear) print "<font color='red'>"; 
+	if ($isLeapYear) print "<font color='red'>";
 	printbr("$earthDate = $mjd = $earthDate2, diff = $diff, years = ".($y - $year1).", len = $len, avg = $avg");
 	if (!$earthDate->isEqualTo($earthDate2)) printbr("*****");
-	if ($isLeapYear) print "</font>"; 
+	if ($isLeapYear) print "</font>";
 }
 */
 
-
-for ($mjd = EarthianDate::mjdDay0; $mjd <= EarthianDate::mjdDay0 + 12053; $mjd++)
-{
-	$earthDate = EarthianDate::fromMjd($mjd);
-	$mjd2 = $earthDate->toMjd();
-	printbr("$mjd = $earthDate = $mjd2");
-	if ($mjd != $mjd2) printbr("*****");
+for ($mjd = EarthianDate::mjdDay0; $mjd <= EarthianDate::mjdDay0 + 12053; $mjd++) {
+  $earthDate = EarthianDate::fromMjd($mjd);
+  $mjd2 = $earthDate->toMjd();
+  printbr("$mjd = $earthDate = $mjd2");
+  if ($mjd != $mjd2) {
+    printbr("*****");
+  }
 }
-
-?>

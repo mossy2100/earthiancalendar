@@ -3,29 +3,27 @@ require "include/init.php";
 require "tpl/TemplateTop.php";
 require "$libDir/dtl.php";
 ?>
+
 <style type="text/css">
-  <!--
-  .style1 {
-    font-style: italic;
-  }
+.style1 {
+  font-style: italic;
+}
 
-  .style2 {
-    background-color: #dddddd;
-  }
+.style2 {
+  background-color: #dddddd;
+}
 
-  .style3 {
-    color: ForestGreen;
-  }
+.style3 {
+  color: ForestGreen;
+}
 
-  .style4 {
-    color: Navy;
-  }
+.style4 {
+  color: Navy;
+}
 
-  .style5 {
-    background-color: #e5ffe5;
-  }
-
-  -->
+.style5 {
+  background-color: #e5ffe5;
+}
 </style>
 
 <h1>Weeks</h1>
@@ -400,9 +398,6 @@ If the Earthian Calendar specified that Lunaday (Monday) was the first day of th
   </tr>
 </table>
 <p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>
-  <?php
-  require "tpl/TemplateBottom.php";
-  ?>
-</p>
+
+<?php
+require "tpl/TemplateBottom.php";

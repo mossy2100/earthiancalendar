@@ -21,15 +21,18 @@
 <body>
 
 <pre>
-  <?php //var_dump($_SERVER); ?>
+  <?php
+  //var_dump($_SERVER); ?>
 </pre>
 
-  <?php require_once "$baseDir/include/menu.php"; ?>
+<?php
+require_once "$baseDir/include/menu.php"; ?>
 
-  <div id='main'>
+<div id='main'>
 
-    <div id='header'>
-      <img src="<?php echo $imagesUrl; ?>/TheEarthianCalendar-banner.jpg"
-        alt="The Earthian Calendar" width="413" height="175">
-      <h3><em>A simple, accurate, solar calender for Earth</em></h3>
-    </div>
+  <div id='header'>
+    <img src="<?php
+    echo $imagesUrl; ?>/TheEarthianCalendar-banner.jpg"
+      alt="The Earthian Calendar" width="413" height="175">
+    <h3><em>A simple, accurate, solar calender for Earth</em></h3>
+  </div>

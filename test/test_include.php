@@ -9,14 +9,8 @@ $debugMode = true;
 
 debug($_SERVER);
 
-
-for ($i = -10; $i <= 10; $i++)
-{
-	$d = dtlMJDToDate($i);
-	$dow = dtlGetDayOfWeek($d);
-	printbr("MJD = $i, date = $d, dayofweek = ".$dtlLanguages['EN']['dayNames'][$dow]);
+for ($i = -10; $i <= 10; $i++) {
+  $d = dtlMJDToDate($i);
+  $dow = dtlGetDayOfWeek($d);
+  printbr("MJD = $i, date = $d, dayofweek = " . $dtlLanguages['EN']['dayNames'][$dow]);
 }
-
-
-
-?>
